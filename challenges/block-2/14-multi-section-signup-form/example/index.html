@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Multi-Section Signup Form</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. Two fieldsets, aria-required on every required field, aria-describedby linking fields to hint text.
+  -->
+  <main>
+    <h1>Create Your Account</h1>
+    <form action="/signup" method="POST">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div>
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required aria-required="true">
+        </div>
+        <div>
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" name="email" required aria-required="true">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Account Information</legend>
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required aria-required="true" aria-describedby="username-hint">
+          <p id="username-hint">Choose a unique username, 3-20 characters.</p>
+        </div>
+        <div>
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" name="password" required minlength="8" aria-required="true" aria-describedby="password-hint">
+          <p id="password-hint">Must be at least 8 characters.</p>
+        </div>
+      </fieldset>
+      <button type="submit">Create Account</button>
+    </form>
+  </main>
+</body>
+</html>
