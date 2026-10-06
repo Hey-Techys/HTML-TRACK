@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Feedback Survey Form</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. Checkbox group for multi-select, radio group for single-select rating, each in its own fieldset.
+  -->
+  <main>
+    <h1>Feedback Survey</h1>
+    <form action="/feedback" method="POST">
+      <fieldset>
+        <legend>Which features did you like?</legend>
+        <div>
+          <input type="checkbox" id="feature-ui" name="features" value="ui">
+          <label for="feature-ui">User Interface</label>
+        </div>
+        <div>
+          <input type="checkbox" id="feature-speed" name="features" value="speed">
+          <label for="feature-speed">Speed</label>
+        </div>
+        <div>
+          <input type="checkbox" id="feature-support" name="features" value="support">
+          <label for="feature-support">Customer Support</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>How satisfied are you overall?</legend>
+        <div>
+          <input type="radio" id="rating-1" name="rating" value="1">
+          <label for="rating-1">1 - Not satisfied</label>
+        </div>
+        <div>
+          <input type="radio" id="rating-5" name="rating" value="5">
+          <label for="rating-5">5 - Very satisfied</label>
+        </div>
+      </fieldset>
+      <div>
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" name="comments"></textarea>
+      </div>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </main>
+</body>
+</html>

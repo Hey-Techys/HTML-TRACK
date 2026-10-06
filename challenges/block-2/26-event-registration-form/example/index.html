@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Event Registration Form</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. Combines text, email, date, select, and a radio fieldset in one form.
+  -->
+  <main>
+    <h1>Event Registration</h1>
+    <form action="/register" method="POST">
+      <div>
+        <label for="reg-name">Full Name</label>
+        <input type="text" id="reg-name" name="name" required>
+      </div>
+      <div>
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" name="email" required>
+      </div>
+      <div>
+        <label for="reg-date">Arrival Date</label>
+        <input type="date" id="reg-date" name="arrival-date" required>
+      </div>
+      <div>
+        <label for="ticket-type">Ticket Type</label>
+        <select id="ticket-type" name="ticket-type">
+          <option value="standard">Standard</option>
+          <option value="vip">VIP</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+      <fieldset>
+        <legend>Meal Preference</legend>
+        <div>
+          <input type="radio" id="meal-standard" name="meal" value="standard" checked>
+          <label for="meal-standard">Standard</label>
+        </div>
+        <div>
+          <input type="radio" id="meal-vegetarian" name="meal" value="vegetarian">
+          <label for="meal-vegetarian">Vegetarian</label>
+        </div>
+      </fieldset>
+      <button type="submit">Register</button>
+    </form>
+  </main>
+</body>
+</html>

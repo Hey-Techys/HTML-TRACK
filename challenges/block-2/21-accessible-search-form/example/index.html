@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Accessible Search Form</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. Label is present for assistive tech but visually hidden via clip, not display:none.
+  -->
+  <main>
+    <form role="search" action="/search" method="GET">
+      <label for="site-search" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);">Search this site</label>
+      <input type="search" id="site-search" name="q" placeholder="Search...">
+      <button type="submit">Search</button>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment</title>
+  <meta name="description" content="Book your appointment online with our simple, accessible scheduling form.">
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. aria-live region left empty for a future JS confirmation message; date is bounded with min, phone constrained with pattern.
+  -->
+  <main>
+    <h1>Book an Appointment</h1>
+    <form action="/book" method="POST">
+      <div>
+        <label for="booking-date">Appointment Date</label>
+        <input type="date" id="booking-date" name="date" required min="2026-01-01">
+      </div>
+      <div>
+        <label for="booking-phone">Phone Number</label>
+        <input type="tel" id="booking-phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567" required>
+      </div>
+      <div>
+        <label for="booking-email">Email</label>
+        <input type="email" id="booking-email" name="email" required>
+      </div>
+      <button type="submit">Book Appointment</button>
+    </form>
+    <p id="booking-status" aria-live="polite" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);"></p>
+  </main>
+</body>
+</html>

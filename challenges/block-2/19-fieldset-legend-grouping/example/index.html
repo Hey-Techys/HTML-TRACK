@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Fieldset & Legend Grouping</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. Radio group wrapped in fieldset/legend; all inputs share one name.
+  -->
+  <main>
+    <h1>Contact Preferences</h1>
+    <form action="/preferences" method="POST">
+      <fieldset>
+        <legend>Preferred Contact Method</legend>
+        <div>
+          <input type="radio" id="contact-email" name="contact-method" value="email">
+          <label for="contact-email">Email</label>
+        </div>
+        <div>
+          <input type="radio" id="contact-phone" name="contact-method" value="phone">
+          <label for="contact-phone">Phone</label>
+        </div>
+        <div>
+          <input type="radio" id="contact-text" name="contact-method" value="text">
+          <label for="contact-text">Text Message</label>
+        </div>
+      </fieldset>
+      <button type="submit">Save Preference</button>
+    </form>
+  </main>
+</body>
+</html>

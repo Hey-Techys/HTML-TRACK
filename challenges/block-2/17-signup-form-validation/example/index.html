@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Signup Form With Validation</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. This example uses native HTML validation attributes (required,
+    minlength, type) instead of any JavaScript.
+  -->
+  <main>
+    <h1>Create Your Account</h1>
+    <form action="/signup" method="POST">
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required minlength="2">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="8">
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </main>
+</body>
+</html>

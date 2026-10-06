@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Phone Pattern Validation</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. Tel input constrained with a pattern attribute and a format hint via placeholder.
+  -->
+  <main>
+    <h1>Phone Contact Form</h1>
+    <form action="/submit" method="POST">
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-123-4567" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
