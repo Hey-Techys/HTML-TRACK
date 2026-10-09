@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Keyboard-Navigable Form</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. Only native controls are used, tab order follows source order, and focus outlines are kept so keyboard users can see where they are.
+  -->
+  <main>
+    <h1>Request a Callback</h1>
+    <form action="/callback" method="POST">
+      <div>
+        <label for="cb-name">Name</label>
+        <input type="text" id="cb-name" name="name" required>
+      </div>
+      <div>
+        <label for="cb-time">Best time to call</label>
+        <select id="cb-time" name="time">
+          <option value="morning">Morning</option>
+          <option value="afternoon">Afternoon</option>
+          <option value="evening">Evening</option>
+        </select>
+      </div>
+      <div>
+        <label for="cb-notes">Notes</label>
+        <textarea id="cb-notes" name="notes" rows="3"></textarea>
+      </div>
+      <button type="submit">Request Callback</button>
+    </form>
+  </main>
+</body>
+</html>

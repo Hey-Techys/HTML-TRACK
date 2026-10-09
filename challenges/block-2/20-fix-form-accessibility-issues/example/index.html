@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Fixed Accessible Form</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. Fixes: (1) <p> replaced with a <label> for the name input, (2) email given a visible label instead of relying on placeholder, (3) clickable <div> replaced with a real submit <button>.
+  -->
+  <main>
+    <h1>Contact Us</h1>
+    <form action="/contact" method="POST">
+      <div>
+        <label for="fix-name">Name</label>
+        <input type="text" id="fix-name" name="name">
+      </div>
+      <div>
+        <label for="fix-email">Email</label>
+        <input type="email" id="fix-email" name="email" placeholder="you@example.com">
+      </div>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+</body>
+</html>

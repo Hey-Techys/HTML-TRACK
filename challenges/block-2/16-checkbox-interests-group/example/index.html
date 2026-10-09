@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example — Checkbox Interests Group</title>
+</head>
+<body>
+  <!--
+    This is a worked example showing the standard expected for Block 2
+    (forms/accessibility/SEO) issues. Checkboxes share one name, each has its own label, and the group is described by a legend.
+  -->
+  <main>
+    <h1>Tell Us About You</h1>
+    <form action="/interests" method="POST">
+      <fieldset>
+        <legend>Select your interests</legend>
+        <div>
+          <input type="checkbox" id="interest-design" name="interests" value="web-design">
+          <label for="interest-design">Web Design</label>
+        </div>
+        <div>
+          <input type="checkbox" id="interest-data" name="interests" value="data">
+          <label for="interest-data">Data</label>
+        </div>
+        <div>
+          <input type="checkbox" id="interest-cloud" name="interests" value="cloud">
+          <label for="interest-cloud">Cloud</label>
+        </div>
+        <div>
+          <input type="checkbox" id="interest-mobile" name="interests" value="mobile">
+          <label for="interest-mobile">Mobile</label>
+        </div>
+      </fieldset>
+      <button type="submit">Save Interests</button>
+    </form>
+  </main>
+</body>
+</html>
