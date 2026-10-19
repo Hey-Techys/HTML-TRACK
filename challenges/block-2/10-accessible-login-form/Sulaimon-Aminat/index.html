@@ -1,0 +1,39 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aminat - Accessible Login Page</title>
+  </head>
+  <body>
+    <header>
+      <h1>Login Form</h1>
+    </header>
+    <main>
+      <form>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="silverjokes@gmail.com"
+          required
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="samsmith26*"
+          aria-describedby="password-description"
+          required
+        />
+        <p id="password-description">
+          Password must contain at least one number, one alphabeth, one special
+          character and not less than 8 characters long.
+        </p>
+        <button type="submit">Login</button>
+      </form>
+    </main>
+  </body>
+</html>
