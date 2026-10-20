@@ -1,0 +1,28 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aminat - fix form accessibility issues</title>
+  </head>
+  <body>
+      <!-- This form did not have a label tag to properly identify the input fields, 
+       - I changed the <p> tags to <label tags to properly identify the input fields.
+        -I changed the <div> tag to a proper <button> tag to submit the form and also allow keyboard accessibility for users without a mouse.
+        -I added a descriptive text to the submit button to make it clear what it does.
+        I added placeholder text to the input fields to provide additional context for users.
+        -->
+        <header>
+            <h1>Contact Form</h1>
+        </header>
+    <main>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" />
+        <button onclick="this.closest('form').submit()">Submit Contact Details</button>
+      </form>
+    </main>
+  </body>
+</html>
