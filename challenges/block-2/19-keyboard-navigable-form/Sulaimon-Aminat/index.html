@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aminat - Keyboard navigable form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Keyboard Navigable Form</h1>
+    </header>
+    <main>
+      <form>
+        
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        <br/>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        <br/>
+        <label for="telephone">Telephone</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="0906-555-6554" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" required />
+        <br/>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" aria-describedby="password-hint" required />
+        <p id="password-hint">Enter a strong password (8-20 characters)</p>
+        <br/>
+        <label for="birthdate">Birth Date</label>
+        <input type="date" id="birthdate" name="birthdate" max="2026-10-20" />
+        <br/>
+        <select>
+            <option value="">Select Gender</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+        </select>
+        <br/>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
