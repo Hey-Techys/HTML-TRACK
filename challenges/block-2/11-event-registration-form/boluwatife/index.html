@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration Form</title>
+  </head>
+  <body>
+    <main>
+      <h1>Event Registration Form</h1>
+      <form action="#" method="post">
+        <div>
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="fullname" required />
+        </div>
+        <div>
+          <label for="mail">Email Address</label>
+          <input type="email" id="mail" name="email" required />
+        </div>
+        <div>
+          <label for="date">Arrival Date</label>
+          <input
+            type="date"
+            name="date"
+            id="arrival-date"
+            min="2026-10-27"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="ticket-type">Ticket Type</label>
+          <select name="ticket-type" id="ticket-type">
+            <option value="student">Student</option>
+            <option value="standard">Standard</option>
+            <option value="vip">VIP</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Meal Preference</legend>
+          <div>
+            <input
+              type="radio"
+              id="meal-type"
+              name="meal"
+              value="standard"
+              checked
+            />
+            <label for="meal-type">Standard</label>
+          </div>
+          <div>
+            <input type="radio" id="meal-type" name="meal" value="vegetarian" />
+            <label for="meal-type">Vegetarian</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Register</button>
+      </form>
+    </main>
+  </body>
+</html>
