@@ -3,40 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="'This is a simple booking form" />
-    <title>Document</title>
+    <meta name="description" content="This is a simple booking form" />
+    <title>Aminat - Appointment Booking Form</title>
+    <style>
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+      }
+    </style>
   </head>
   <body>
     <main>
       <form action="#" method="post">
         <label for="fullname">Full Name</label>
-        <input
-          type="text"
-          name="fullname"
-          id="fullname"
-          required
-        />
+        <input type="text" name="fullname" id="fullname" required />
         <br />
         <label for="phone">Phone</label>
         <input
           type="tel"
           name="phone"
           id="phone"
-          aria-describedby="phone-error"
+          pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+          placeholder="080-1234-5678"
           required
         />
         <br />
         <label for="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          required
-        />
+        <input type="email" name="email" id="email" required />
         <br />
         <label for="arrival-date">Arrival Date</label>
         <input
           type="date"
+          min="2026-10-29"
           name="arrival-date"
           id="arrival-date"
           required
@@ -45,6 +46,7 @@
         <label for="return-date">Return Date</label>
         <input
           type="date"
+          min="2026-10-30"
           name="return-date"
           id="return-date"
           required
@@ -52,7 +54,11 @@
         <br />
         <button type="submit">Submit Booking Details</button>
       </form>
-      <p id="display-booking-status" aria-live="polite">
+      <p
+        id="display-booking-status"
+        class="visually-hidden"
+        aria-live="polite"
+      >
         <!-- dynamically inject text to display a text to the user after submission -->
       </p>
     </main>
