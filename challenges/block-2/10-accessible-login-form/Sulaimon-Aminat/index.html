@@ -25,11 +25,12 @@
           id="password"
           name="password"
           placeholder="samsmith26*"
-          aria-describedby="password-description"
+          minLength="8"
+          aria-describedby="password-hint"
           required
         />
-        <p id="password-description">
-          Password must contain at least one number, one alphabeth, one special
+        <p id="password-hint">
+          Password must contain at least one number, one letter, one special
           character and not less than 8 characters long.
         </p>
         <button type="submit">Login</button>
